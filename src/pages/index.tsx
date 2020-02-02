@@ -1,3 +1,4 @@
+import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import util from 'util';
@@ -5,16 +6,20 @@ import { NextPage } from 'next';
 import { DeckDictionary, NextPleasePageProps } from '../types';
 import { asyncForEach } from '../utilities';
 import { useDecks } from '../contexts/deck';
+import { DeckList } from '../components';
 
 interface StartScreenProps extends NextPleasePageProps {
   decks?: DeckDictionary;
 }
 
-const StartScreen: NextPage<StartScreenProps> = ({ decks, updateDecks }) => {
-  const decksFromContext = useDecks();
-  if (!Object.keys(decksFromContext).length && decks) updateDecks(decks);
+const StartScreen: NextPage<StartScreenProps> = ({
+  decks: initialDecks,
+  updateDecks,
+}) => {
+  const decks = useDecks();
+  if (!Object.keys(decks).length && decks) updateDecks(initialDecks);
 
-  return null;
+  return <DeckList decks={decks} />;
 };
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type

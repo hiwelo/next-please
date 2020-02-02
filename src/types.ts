@@ -1,12 +1,12 @@
 import { ReactNode, ReactText } from 'react';
 import { UrlObject } from 'url';
 
+export type DeckDictionary = Record<string, any>;
+
 /** Specify URLs for the NextJS Link component */
 export type Url = string | UrlObject;
 
 export interface Deck {
-  /** Slides part of this deck */
-  slides: Slide[];
   /** Title of this deck */
   title: ReactText;
 }

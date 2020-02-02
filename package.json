@@ -4,6 +4,9 @@
   "description": "Next Please is a small presentation deck app for my talks",
   "main": "index.js",
   "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/hiwelo/next-please/issues"
   },
-  "homepage": "https://github.com/hiwelo/next-please#readme"
+  "homepage": "https://github.com/hiwelo/next-please#readme",
+  "dependencies": {
+    "next": "^9.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
 }

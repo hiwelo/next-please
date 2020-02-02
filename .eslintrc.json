@@ -15,7 +15,10 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "rules": {},
+  "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off"
+  },
   "settings": {
     "react": {
       "version": "detect"

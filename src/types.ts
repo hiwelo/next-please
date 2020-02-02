@@ -1,7 +1,7 @@
-import { ReactNode, ReactText } from 'react';
+import { Dispatch, ReactNode, ReactText, SetStateAction } from 'react';
 import { UrlObject } from 'url';
 
-export type DeckDictionary = Record<string, any>;
+export type DeckDictionary = Record<string, Deck>;
 
 /** Specify URLs for the NextJS Link component */
 export type Url = string | UrlObject;
@@ -9,6 +9,10 @@ export type Url = string | UrlObject;
 export interface Deck {
   /** Title of this deck */
   title: ReactText;
+}
+
+export interface NextPleasePageProps {
+  updateDecks?: Dispatch<SetStateAction<DeckDictionary>>;
 }
 
 export interface Slide {

@@ -1,0 +1,19 @@
+{
+  "name": "next-please",
+  "version": "0.0.1",
+  "description": "Next Please is a small presentation deck app for my talks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiwelo/next-please.git"
+  },
+  "author": "Damien Senger <damien@raccoon.studio>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiwelo/next-please/issues"
+  },
+  "homepage": "https://github.com/hiwelo/next-please#readme"
+}
